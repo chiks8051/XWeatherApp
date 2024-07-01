@@ -2,17 +2,16 @@ import React, {  useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 
-const Weather = () => {
+const Weather = (props) => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
   const fetchWeateher = async () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
+        `http://api.weatherapi.com/v1/current.json?key=${props.api_key}&q=${city}`
       );
       setWeather(response.data);
     setIsLoading(false);
