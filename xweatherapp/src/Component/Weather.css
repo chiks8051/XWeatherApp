@@ -1,0 +1,28 @@
+.whtr {
+  text-align: center;
+}
+.inp {
+  margin: 200px 10px 0px 0px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(64, 218, 126);
+  color: white;
+}
+
+.weather-cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.weather-card{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
