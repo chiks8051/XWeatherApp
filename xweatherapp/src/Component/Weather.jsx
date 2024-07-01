@@ -11,7 +11,7 @@ const Weather = (props) => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=${props.api_key}&q=${city}`
+        `https://api.weatherapi.com/v1/current.json?key=${props.api_key}&q=${city}`
       );
       setWeather(response.data);
     setIsLoading(false);
